@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de cadastro</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section id="form">
+        <div class="alingText">
+          <h1>Preencha os campos abaixo</h1>
+          <p>Complete corretamente para fazer seu cadastro</p>
+        </div>
+        <form>
+          <div id="wrappedForm">
+            <div class="form">
+              <label for="CampoNome">Nome:</label>
+              <input
+                type="text"
+                id="CampoNome"
+                name="CampoNome"
+                placeholder="Digite o nome do paciente"
+              />
+            </div>
+
+            <fieldset>
+              <legend>Sexo:</legend>
+              <input
+                type="radio"
+                id="Masculino"
+                checked
+                name="sexo"
+                value="Masculino"
+              />
+              <label for="Masculino">Masculino</label>
+              <input type="radio" id="Feminino" name="sexo" value="Feminino" />
+              <label for="Feminino">Feminino</label>
+              <input type="radio" id="OutroSexo" name="sexo" value="Outro" />
+              <label for="OutroSexo">Outro</label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Gênero:</legend>
+              <input
+                type="radio"
+                id="hetero"
+                checked
+                name="genero"
+                value="hetero"
+              />
+              <label for="hetero">Hetero</label>
+              <input
+                type="radio"
+                id="nao-binario"
+                name="genero"
+                value="nao-binario"
+              />
+              <label for="nao-binario">Não binário</label>
+              <input
+                type="radio"
+                id="OutroGenero"
+                name="genero"
+                value="Outro"
+              />
+              <label for="OutroGenero">Outro</label>
+            </fieldset>
+
+            <div class="form">
+              <label for="RG">R.G.:</label>
+              <input
+                type="text"
+                id="RG"
+                name="RG"
+                placeholder="Digite o R.G. do paciente"
+                pattern="[0-9]+"
+                maxlength="10"
+                minlength="1"
+              />
+            </div>
+
+            <div class="form">
+              <label for="CNS">CNS:</label>
+              <input
+                type="text"
+                id="CNS"
+                name="CNS"
+                placeholder="Digite o CNS do paciente"
+                maxlength="12"
+              />
+            </div>
+
+            <div class="form">
+              <label for="dataNascimento">Selecione o seu aniversário:</label>
+              <input type="date" id="dataNascimento" name="dataNascimento" />
+            </div>
+
+            <div class="form">
+              <label for="telefone">Telefone de contato:</label>
+              <input
+                type="text"
+                id="telefone"
+                placeholder="(ddd) + seu número"
+                name="telefone"
+              />
+            </div>
+
+            <div class="form">
+              <label for="nomeMae">Nome da mãe:</label>
+              <input
+                type="text"
+                id="nomeMae"
+                name="nomeMae"
+                placeholder="Digite o nome de sua mãe"
+                maxlength="50"
+              />
+            </div>
+
+            <div class="form">
+              <label for="cep">Digite seu CEP:</label>
+              <input
+                type="number"
+                id="cep"
+                name="cep"
+                placeholder="Digite seu CEP"
+                maxlength="8"
+              />
+            </div>
+
+            <div class="form">
+              <label for="localidade">Rua/Avenida:</label>
+              <input type="text" id="localidade" name="localidade" disabled />
+            </div>
+
+            <div class="form">
+              <label for="complemento">Complemento:</label>
+              <input
+                type="text"
+                id="complemento"
+                name="complemento"
+                placeholder="Digite o complemento"
+              />
+            </div>
+
+            <div class="form">
+              <label for="bairro">Bairro:</label>
+              <input type="text" id="bairro" name="bairro" disabled />
+            </div>
+
+            <div class="form">
+              <label for="cidade">Cidade:</label>
+              <input type="text" id="cidade" name="cidade" disabled />
+            </div>
+
+            <div class="form">
+              <label for="uf">UF:</label>
+              <input type="text" id="uf" name="uf" disabled />
+            </div>
+
+            <div class="form">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              />
+            </div>
+
+            <div class="form">
+              <label for="doenca">Qual a doença?</label>
+              <select name="doenca" id="doenca">
+                <option value="">--Selecione uma opção--</option>
+                <option value="nefrite">Nefrite</option>
+                <option value="conjutivite">Conjuntivite</option>
+                <option value="renite">Rinite</option>
+                <option value="asma">Asma</option>
+                <option value="tendinite">Tendinite</option>
+              </select>
+            </div>
+
+            <div class="form-buttons">
+              <button type="reset">Reset</button>
+              <button type="submit">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="JS/jquery-3.7.1.min.js"></script>
+    <script src="./JS/main.js"></script>
+  </body>
+</html>

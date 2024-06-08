@@ -1,0 +1,84 @@
+<html>
+<body>
+
+		<div class="campo">
+            <label><strong>Possui treinamento: </strong></label>
+            <radio id="def">
+            <div>
+              <input type="radio" name="devweb" id="sim" value="sim">
+              <label for="sim">SIM</label>
+            </div>
+            <div>
+              <input type="radio" name="devweb" id="nao" value="nao">
+              <label for="nao">NÃO</label>
+            </div>
+            <div>
+            <input type="text" name="descreva" disabled id="descreva">
+        </div>
+		
+		<!-- Outro exemplo --> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<div class="campo">
+			<label><strong>Possui treinamento: </strong></label>
+			<!-- removi o elemento "radio" que fato não existe -->
+			<div>
+			  <input type="radio" name="devweb" id="sim" value="sim">
+			  <label for="sim">SIM</label>
+			</div>
+			<div>
+			  <input type="radio" name="devweb" id="nao" value="nao">
+			  <label for="nao">NÃO</label>
+			</div>
+			<div>
+			<input type="text" name="descreva" id="descreva">
+		</div>
+		
+<script>
+
+window.onload = () => {
+   var input = document.getElementById('descreva');
+   var radio_yes = document.getElementById('sim');
+   var radio_no = document.getElementById('nao');
+    radio_yes.addEventListener('click', (e) => {
+        var radio = e.currentTarget;
+        if(radio.checked == true) {
+          input.disabled=false;
+          input.focus();
+        } else {
+         input.disabled=true;
+          input.value='';
+        }
+    });
+    
+     radio_no.addEventListener('click', (e) => {
+        var radio = e.currentTarget;
+        if(radio.checked == true) {
+          input.value='';
+          input.disabled=true;
+           input.focus();
+        } else {
+         input.disabled=false;
+        }
+    });
+   
+    
+}
+
+// outro exemplo
+$(document).ready(function() {
+  $('#descreva').hide();
+  // aqui um seletor por name, para pegar todos os radio buttons "devweb"
+  $('input:radio[name="devweb"]').change(function() {
+    // aqui, this é o radio quem foi clicado, então basta comparar o valor com val()
+    if ($(this).val() == "sim") {
+        $('#descreva').show();
+    } else {
+      $('#descreva').hide();
+    }
+  });
+});
+
+</script>
+
+</html>
+</body>

@@ -1,0 +1,7 @@
+th, tr, table{
+    border-width: 3px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    padding: 20px;
+}

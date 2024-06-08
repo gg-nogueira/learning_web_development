@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Usando eventos no Javascript</title>
+<script>
+
+	function myFunction()
+	{
+		var x=document.getElementById("fname");
+		x.value=x.value.toUpperCase();
+	}
+	
+	function mOver(obj)
+	{
+		obj.innerHTML="Obrigado"
+	}
+
+	function mOut(obj)
+	{
+		obj.innerHTML="Passe o mouse em mim"
+	}
+	
+	function mDown(obj)
+	{
+		obj.style.backgroundColor="#1ec5e5";
+		obj.innerHTML="Solte o clique"
+	}
+
+	function mUp(obj)
+	{
+		obj.style.backgroundColor="#D94A38";
+		obj.innerHTML="Obrigado"
+	}
+	
+</script>
+
+</head>
+<body>
+
+1. Exemplo onChange()<br>
+Insira seu Nome: <input type="text" id="fname" onchange="myFunction()">
+<p>
+Ao clicarmos fora do input text o texto escrito nele ficará todo em caixa alta.</p><br>
+
+2. Exemplo onMouseover() e onMouseout()<br>
+<div onmouseover="mOver(this)" onmouseout="mOut(this)"
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">Passe o mouse em mim</div><br>
+
+2. Exemplo onMousedown(), onMouseup() e onClick()<br>
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">Clique aqui</div><br>
+
+
+</body>
+</html>

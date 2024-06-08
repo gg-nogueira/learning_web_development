@@ -1,0 +1,25 @@
+#tudao {
+  background-color: aquamarine;
+  flex-direction: column;
+  display: flex;
+}
+
+.principalDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.quadardo {
+  width: 25%;
+  border: 5px outset red;
+  background-color: yellow;
+  font-weight: 600;
+  text-align: center;
+  margin: 8px;
+}
+
+#teste {
+  background-color: pink;
+}

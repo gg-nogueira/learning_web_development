@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CADASTRO</h1>
+    <form action="recebeDados.php" method="post" >
+        <input type="text" name="fNome" id="" placeholder="Informe o nome" maxlength="80" size= "50" required>
+        <br>
+        <input type="date" name="fNasc" id="" required>
+        <br>
+        <input type="text" name="fEnd" id="" placeholder="Informe o endereço" maxlength="80" size= "50" required>
+        <br><br>
+        <input type="radio" name="fGenero" value="f" required>Feminino
+        <input type="radio" name="fGenero" value="m">Masculino
+        <input type="radio" name="fGenero" value="o">Outros
+        <br><br>
+        <input type="checkbox" name="fInfo1" value="sim">
+        <label for="">Tem interesse em novos produtos?</label>
+        <br>
+        <input type="checkbox" name="fInfo2" value="sim">
+        <label for="">Quer receber nossas ofertas?</label>
+        <br><br>
+        <input type="submit" value="Enviar">
+        
+    </form>
+</body>
+</html>

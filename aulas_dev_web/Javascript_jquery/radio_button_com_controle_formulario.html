@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Form de exemplo com radios</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action="form-action.php" method="post">
+            <p>
+                <input type="radio" name="band-rock" value="beatles"/>The Beatles
+                <input type="radio" name="band-rock" value="led-zeppelin"/> Led Zeppelin
+                <input type="radio" name="band-rock" value="pink-floyd"/>Pink Floy
+            </p>
+            <p>
+                <input type="button" id="btnSubmit" value="Submit me!" />
+                <input type="button" id="btnLoad" value="Load!" />
+            </p>
+        </form>
+        <!-- <script type="text/javascript" src="radios-v1.0.js"></script> -->
+		
+	
+		<script>
+		
+		/**
+		 * Botão Submit
+		 */
+		 // getElementsByName("valor-da-propriedade-name"); O resultado desta função é um conjunto de elemento, ou seja, um array de radios buttons.
+		 /*
+			Precisamos percorrer esse conjunto de radios e em cada radio perguntar se está ou não “checado”. 
+			Se estiver checado, então nos avise.
+			
+			Sabemos que a propriedade checked do elemento nos indicará se ele está ou não “checkado”. 
+			Então if (cadaRadio.checked) resolve nosso problema, porém não podemos nos esquecer que a variável 
+			radios é uma coleção ou melhor, um array. E como tal, cada elemento deve ser acessado através de seu índice, 
+			exemplo: radios[0], radios[1], etc…
+		 */
+		document.getElementById("btnSubmit").onclick = function() {
+			var radios = document.getElementsByName("band-rock");
+			for (var i = 0; i < radios.length; i++) {
+				if (radios[i].checked) {                             // mesma coisa que if (radios[i].checked == true)
+					console.log("Escolheu: " + radios[i].value);    // Se o elemento estiver checado poderemos mostrar o valor do “radio”
+					alert("Escolheu: " + radios[i].value);
+				}
+			}
+		};
+		
+		/**
+		 * Botão Load
+		 */
+		document.getElementById("btnLoad").onclick = function() {
+			var radios = document.getElementsByName("band-rock");
+
+			for (var i = 0; i < radios.length; i++) {
+				if (radios[i].value === "led-zeppelin") {
+					radios[i].checked = true;
+				}
+			}
+		};
+		
+		</script>
+    </body>
+</html>

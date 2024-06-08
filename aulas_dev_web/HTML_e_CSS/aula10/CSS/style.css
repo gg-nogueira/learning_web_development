@@ -1,0 +1,18 @@
+.destaque {
+  color: blue;
+}
+
+#paragrafo-unico {
+  font-weight: bold;
+  background-color: red;
+}
+
+form.form-example {
+  display: table;
+}
+
+label, input {
+  display: table-cell;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}

@@ -1,0 +1,24 @@
+body {
+	font-family: Arial;
+	background-color: #F0F0F0
+}
+
+#foto {
+	max-width:150px;
+	max-height:160px;
+    width: auto;
+    height: auto;
+
+}
+
+#name{
+	font-size: 50px;
+	font-family: serif;
+	color: black;
+	text-align: center;
+	animation: animate 1.5s linear infinite;
+}
+
+footer{
+	text-align:center;
+}
